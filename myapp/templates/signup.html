@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/main.css'%}">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script type="module" src="{% static '/scripts/signup.js'%}"></script>
+    <title>Registrarse</title>
+</head>
+<body>
+    {% csrf_token %}
+    <header class="header">
+    <nav class="nav">
+        <ul >
+            <li><a class="signup" href="../ECOMMERCE">Volver</a></li>
+
+        </ul>
+    </nav>
+</header>
+   <main class="main">
+    <form class="formSignup" method="post">
+        <h1>Sign Up</h1>
+        {% csrf_token %}
+        {{form}}
+        <button>Sign Up</button>
+
+        
+    </form>    
+   </main>
+    <aside></aside>
+    <footer class="footer"></footer>  
+    
+</body>
+</html>

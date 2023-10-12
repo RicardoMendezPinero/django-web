@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/main.css'%}">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script type="module" src="{% static '/scripts/vender.js'%}"></script>
+    <title>Subir tu producto</title>
+</head>
+<body>
+    {% csrf_token %}
+    <header class="header">
+    <nav class="nav">
+        <ul >
+            <li><a class="signup" href="../">Volver</a></li>
+
+        </ul>
+    </nav>
+</header>
+   <main class="main">
+    <section class="Section2">
+        <h1>{{productonombre}}</h1>
+         <div>
+        <p class="verproductop">Aca va una descripcion del producto Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, officia nostrum fuga quasi architecto fugit ab veniam eveniet repellat natus ut dicta cum commodi eius, aut fugiat ipsam et quo?</p>
+        <form class="verproductoform" method="post">
+            {% csrf_token %}
+            {{form}}
+            <button>Subir</button>
+    
+            
+        </form>   
+    </div>
+    </section>
+   </main>
+    <aside></aside>
+    <footer class="footer"></footer>
+      
+</body>
+</html>

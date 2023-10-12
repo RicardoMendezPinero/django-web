@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/main.css'%}">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script type="module" src="{% static '/scripts/order.js'%}"></script>
+    <title>ECOMMERCE</title>
+</head>
+<body>
+    {% csrf_token %}
+    <header class="header">
+    <nav class="nav">
+        <ul >
+            <li><a class="signup" href="../../">Volver</a></li>
+
+        </ul>
+    </nav>
+</header>
+   <main class="main">
+    <section class="Section2">
+        
+        <form class="verproductoform" method="post">
+            {% csrf_token %}
+            <h2>Detalles de orden</h2>
+            <h3>Nombre del producto:{{nombreproducto}}</h3> 
+            <h3>Comprador: {{comprador}}</h3>
+            <h3>Vendedor: {{vendedorproducto}}</h3>
+            <h3>Precio del producto: {{precioproducto}}</h3>
+            <h3>Cantidad: {{cantidadproductos}}</h3>
+            <h3>Importe total: {{pagar}}</h3>
+
+    
+            
+        </form>   
+    </section>
+   </main>
+    <aside></aside>
+    <footer class="footer"></footer>
+    
+</body>
+</html>

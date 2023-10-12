@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/main.css'%}">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script type="module" src="{% static '/scripts/logeado.js'%}"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>ECOMMERCE</title>
+</head>
+<body>
+
+    {% csrf_token %}
+    <header class="header">
+    <nav class="nav">
+        <ul >
+            <li><a class="signup" href="../">Log out</a></li>
+            <li><a class="login" href="vender">Subir</a></li>
+        </ul>
+    </nav>
+    <div class="encabezado"><h1>Lugaro store</h1></div>
+</header>
+   <main class="main">
+    <section class="Section1">
+        <button class="Refrescar">Refrescar</button>
+        <div class="CajaPrincipal2"><div class="CajaProductos2"></div></div>
+    </section>
+   </main>
+    <aside></aside>
+    <footer class="footer"></footer>
+</body>
+</html>
